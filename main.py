@@ -42,6 +42,11 @@ class App:
         self.operation3_menu.add_command(label='convex hull', command=self.myfunction.convex_hull)
         self.operation3_menu.add_command(label= 'bounding box', command=self.myfunction.bounding_box)
 
+        self.operation4_menu = tk.Menu(self.main_menu, tearoff=0)
+        self.main_menu.add_cascade(label='function4', menu=self.operation4_menu)
+        self.operation4_menu.add_command(label='basic morphology', command=self.myfunction.basic_morphology)
+        self.operation4_menu.add_command(label='advanced morphology', command=self.myfunction.advanced_morphology)
+
         self.window.config(menu=self.main_menu)
         self.window.mainloop()      #讓視窗不斷整理
 
